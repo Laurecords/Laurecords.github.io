@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="LAU Records — sello independiente de techno oscuro e hipnótico desde Gijón, Asturias.">
+<title>LAU RECORDS — Independent Techno Label</title>
+<style>
+:root{--bg:#080808;--panel:#111;--line:#303030;--text:#f4f4f4;--muted:#a5a5a5;--accent:#d6d6d6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.72}
+.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(8,8,8,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:78px}
+.logo{font-size:19px;font-weight:800;letter-spacing:.18em;white-space:nowrap}
+.logo span{font-weight:400}
+nav{display:flex;gap:24px;flex-wrap:wrap;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#ddd}
+.hero{min-height:600px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:54px;padding:90px 0 84px}
+.kicker{color:var(--muted);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+h1{font-size:clamp(52px,9vw,112px);line-height:.88;letter-spacing:-.075em;margin:24px 0 28px;font-weight:800}
+h1 span{display:block;color:#777}
+.lead{font-size:17px;line-height:1.7;color:#c5c5c5;max-width:520px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:14px 18px;border:1px solid #eee;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.btn.light{background:#eee;color:#080808}
+.art{aspect-ratio:4/5;border:1px solid #353535;background:radial-gradient(ellipse at 50% 40%,#333 0,#171717 36%,#080808 72%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.art:before,.art:after{content:"";position:absolute;border:1px solid #777;border-radius:50%;width:68%;aspect-ratio:1;opacity:.35}
+.art:after{width:44%;transform:rotate(35deg);border-radius:48% 52% 40% 60%}
+.art-mark{font-size:clamp(42px,7vw,84px);font-weight:200;letter-spacing:-.1em;z-index:1;color:#eee}
+.art-note{position:absolute;bottom:18px;left:18px;right:18px;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.14em;color:#bbb;text-transform:uppercase}
+section{padding:82px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px}
+h2{font-size:clamp(30px,5vw,52px);letter-spacing:-.055em;margin:10px 0 0}
+.small{font-size:12px;color:var(--muted);line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.release{border:1px solid var(--line);background:#0d0d0d}
+.cover{aspect-ratio:1;background:linear-gradient(145deg,#242424,#090909 65%);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cover:before{content:"";position:absolute;width:60%;aspect-ratio:1;border:1px solid #777;border-radius:50%;box-shadow:0 0 0 18px #111,0 0 0 19px #444,0 0 0 48px #111,0 0 0 49px #333}
+.cover .code{position:absolute;top:16px;left:16px;font-size:11px;letter-spacing:.16em;color:#bbb}
+.cover .symbol{z-index:1;font-size:34px;font-weight:200;color:#e1e1e1;letter-spacing:-.1em}
+.release-info{padding:20px}
+.release-info h3{font-size:19px;margin:0 0 8px;letter-spacing:-.02em}
+.release-info p{font-size:12px;color:var(--muted);line-height:1.65;margin:0 0 18px}
+.tag{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#bbb}
+.text-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.statement{font-size:clamp(24px,3.4vw,40px);line-height:1.2;letter-spacing:-.045em;margin:0}
+.panel{border:1px solid var(--line);padding:26px;background:#0d0d0d}
+.panel h3{font-size:18px;margin:0 0 12px}
+.panel p{font-size:13px;line-height:1.8;color:#bbb;margin:0}
+.contact-row{display:flex;justify-content:space-between;gap:28px;align-items:center}
+footer{padding:30px 0;color:#777;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:760px){.nav{align-items:flex-start;padding:22px 0;flex-direction:column}.hero{grid-template-columns:1fr;min-height:auto;padding:68px 0}.art{max-width:430px;width:100%;margin:auto}.grid{grid-template-columns:1fr}.text-grid{grid-template-columns:1fr;gap:24px}.section-head,.contact-row{align-items:flex-start;flex-direction:column}nav{gap:14px}.wrap{width:min(100% - 32px,1160px)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home">LAU <span>RECORDS</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#releases">Releases</a><a href="#vinyl">Vinyl</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="home">
+  <div class="wrap hero">
+    <div>
+      <div class="kicker">Independent techno label · Gijón, Asturias</div>
+      <h1>DARK.<br>HYPNOTIC.<br><span>RAW.</span></h1>
+      <p class="lead">Un sello independiente dedicado al techno oscuro, hipnótico e industrial. Construido desde el norte, con una visión abierta a la escena internacional.</p>
+      <div class="actions">
+        <a class="btn light" href="https://laurecords.bandcamp.com/" target="_blank" rel="noopener">Listen on Bandcamp ↗</a>
+        <a class="btn" href="#releases">Explore releases</a>
+      </div>
+    </div>
+    <div class="art" aria-label="Arte gráfico abstracto de LAU Records">
+      <div class="art-mark">LAU</div>
+      <div class="art-note"><span>Independent label</span><span>Est. Gijón</span></div>
+    </div>
+  </div>
+
+  <section id="releases">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">The catalogue</div><h2>Selected releases</h2></div>
+        <a class="btn" href="https://laurecords.bandcamp.com/" target="_blank" rel="noopener">Full catalogue ↗</a>
+      </div>
+      <div class="grid">
+        <article class="release">
+          <div class="cover"><span class="code">LRG003</span><span class="symbol">◉</span></div>
+          <div class="release-info"><div class="tag">Latest release · EP</div><h3>Groof &amp; Pwcca — Perceptual EP</h3><p>Dos trayectorias. Una misma percepción. Una exploración de techno hipnótico y texturas oscuras.</p><a class="btn" href="https://laurecords.bandcamp.com/" target="_blank" rel="noopener">Listen / buy ↗</a></div>
+        </article>
+        <article class="release">
+          <div class="cover"><span class="code">LRG002</span><span class="symbol">⌁</span></div>
+          <div class="release-info"><div class="tag">Various artists</div><h3>The Life of the Dragonflies</h3><p>NTSC Concept · Ellissir · Geømmetrich · Not Charlie.</p><a class="btn" href="https://laurecords.bandcamp.com/" target="_blank" rel="noopener">Listen / buy ↗</a></div>
+        </article>
+        <article class="release">
+          <div class="cover"><span class="code">LRG001</span><span class="symbol">✳</span></div>
+          <div class="release-info"><div class="tag">Various artists</div><h3>The Butterfly Came Here</h3><p>Juan Mur · Enigmático Caballero · Aureal · Soundswhile.</p><a class="btn" href="https://laurecords.bandcamp.com/" target="_blank" rel="noopener">Listen / buy ↗</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="vinyl">
+    <div class="wrap text-grid">
+      <div><div class="kicker">Physical editions</div><h2>From digital to vinyl.</h2></div>
+      <div>
+        <p class="statement">Independent music deserves a physical home.</p>
+        <p class="small" style="margin-top:20px">LAU Records está desarrollando su catálogo físico y nuevas vías de distribución. Las próximas ediciones, fechas de preventa y disponibilidad se anunciarán aquí cuando estén confirmadas.</p>
+        <a class="btn" href="#contact" style="margin-top:14px">Enquiries about vinyl</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap text-grid">
+      <div><div class="kicker">About the label</div><h2>Built in silence.<br>Chosen with intent.</h2></div>
+      <div>
+        <p class="statement">Una identidad sonora propia. Sin atajos.</p>
+        <p class="small" style="margin-top:20px">LAU Records es un sello independiente con base en Gijón, Asturias. Su enfoque se mueve entre el techno oscuro, potente, minimalista e hipnótico, con una mirada puesta en artistas emergentes y en la cultura underground internacional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-row">
+      <div><div class="kicker">Business & distribution</div><h2>Let's build something lasting.</h2><p class="small">Artistas · Distribución · Tiendas · Prensa · Colaboraciones</p></div>
+      <div class="panel"><h3>Contact LAU Records</h3><p>Para colaboraciones, distribución y consultas profesionales, escribe al sello a través de sus canales oficiales.</p><p style="margin-top:16px"><a class="btn light" href="https://laurecords.bandcamp.com/" target="_blank" rel="noopener">Contact via Bandcamp ↗</a></p></div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© LAU RECORDS · Gijón, Asturias</span><span>Independent techno label</span></div></footer>
+</body>
+</html>
